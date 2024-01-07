@@ -1,3 +1,105 @@
+h1 {
+  text-align: center;
+  color: #1f2937;
+  font-family: Abril Fatface, Poppins; 
+  font-size: 50px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+h2 {
+  text-align: center;
+  color: #dc2626;
+  background-color: yellow;
+  padding: 20px;
+}
+
+.new-game {
+  display:flex;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.playbtn {
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: #92400e;
+  padding: 6px;
+  width: fit-content;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.row-container {
+  display: flex;
+  flex: 1,1,1;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.flexitem {
+  display:flex;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background-color: #ffedd5;
+  border-radius: 20px;
+  font-size: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexitem:hover {
+  cursor: pointer;
+} 
+
+:focus {
+  border: 2px solid #92400e;
+}
+
+.flex-container2{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.playerButton {
+  text-align: center;
+  display:flex;
+  flex: 1,1;
+  justify-content: center;
+  align-items: center;
+}
+
+.Player1 {
+  color: #38bdf8;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.Player2 {
+  color: #22c55e;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+// Default css
 .App {
   text-align: center;
 }
