@@ -1,3 +1,12 @@
+.App {
+  text-align: center;
+  
+}
+
+body {
+  background: url("../public/image2.jpg");
+}
+
 h1 {
   text-align: center;
   color: #1f2937;
@@ -100,9 +109,7 @@ h2 {
 
 
 /* Default CSS */
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
