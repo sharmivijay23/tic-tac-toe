@@ -87,7 +87,7 @@ const dataStore = (set, get) => ({
 
         newData[x][y] = currentPlayer
         const winner = gameOver(newData, currentPlayer)
-        const tie = tieCheck(newData);
+        const tie = !winner ? tieCheck(newData) : undefined;
         const nextState = {
             currentPlayer: nextPlayer,
             data: newData,
