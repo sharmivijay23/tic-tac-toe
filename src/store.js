@@ -52,11 +52,21 @@ const gameOver = (data, player) => {
     }
 }
 
+const tieCheck = (data) => {
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            if (!data[i][j])
+                return false
+        }
+    }
+    return true
+}
 
 const dataStore = (set, get) => ({
     data: [[undefined, undefined, undefined], [undefined, undefined, undefined], [undefined, undefined, undefined]],
     currentPlayer: "X",
     winner: undefined,
+    tie: undefined,
     turn: (x, y) => {
         const state = get(); // get() returns {data: [...], currentPlayer: "X" | "O"}
         const data = state.data;
@@ -77,11 +87,12 @@ const dataStore = (set, get) => ({
 
         newData[x][y] = currentPlayer
         const winner = gameOver(newData, currentPlayer)
-
+        const tie = tieCheck(newData);
         const nextState = {
             currentPlayer: nextPlayer,
             data: newData,
             winner,
+            tie,
         };
 
         set(nextState);
@@ -96,6 +107,7 @@ const dataStore = (set, get) => ({
             data: [[undefined, undefined, undefined], [undefined, undefined, undefined], [undefined, undefined, undefined]],
             currentPlayer: "X",
             winner: undefined,
+            tie: undefined,
         }
         set(resetData)
     }

@@ -4,7 +4,7 @@ import { useStore } from "./store"
 
 function App() {
 
-  const { data, turn, winner, resetState } = useStore();
+  const { data, turn, tie, winner, resetState } = useStore();
 
   return (
     <div className="App">
@@ -28,6 +28,10 @@ function App() {
       </div>
 
       {winner && <div className='new-game'> <h2> {winner} won the game </h2>
+        <button className='playbtn' onClick={() => resetState()}> Play Again </button> </div>}
+
+
+      {tie === true && <div className='new-game'> <h2> It's a scratch </h2>
         <button className='playbtn' onClick={() => resetState()}> Play Again </button> </div>}
 
       {/* <div className='flex-container2'>
